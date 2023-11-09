@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Online</title>
+    
+    <style>
+        body {
+            background-color: #000; /* Cor preta */
+            color: #ffffff; /* Cor do texto */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Alterado para 'align-items' para centralizar verticalmente */
+            margin: 0;
+        }
+    
+        #countdown {
+            text-align: center;
+            font-size: 20px;
+            color: orangered;
+            font-family: 'Arial Black', sans-serif;
+        }
+    
+        /* Estilos gerais para o formulário */
+        form {
+            width: 90%; /* Altere a largura do formulário */
+            max-width: 400px; /* Defina um valor máximo de largura */
+            margin: 0 auto;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+    
+        h1 {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 25px;
+            max-width: 400px; /* Defina a largura máxima desejada */
+            color: rgb(252, 168, 0);
+            text-align: center;            
+            margin: 0 auto; /* Centraliza o h1 */
+        }
+        p {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 14px;
+            max-width: 400px; /* Defina a largura máxima desejada */
+            color: rgb(250, 13, 5);
+            text-align: center;        
+            margin: 0 auto; /* Centraliza o h1 */
+        }
+        br {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 14px;
+            max-width: 400px; /* Defina a largura máxima desejada */
+            color: rgb(253, 253, 253);
+            text-align: center;        
+            margin: 0 auto; /* Centraliza o h1 */
+        }
+
+
+
+    
+        /* Estilo para rótulos dos campos */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        /* Estilo para campos de entrada de texto e área de texto */
+        .input-padrao {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    
+        /* Estilo para o botão de envio */
+        .enviar {
+            background-color: #52d108e7;
+            color: #000000;
+            padding: 15px 155px;
+            border: none;
+            border-radius: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .enviar:hover {
+            background-color: rgb(146, 255, 73);
+        }
+    
+        /* Estilo para o checkbox */
+        .checkbox {
+            display: block;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+    
+        /* Estilo para o campo de seleção */
+        select {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #f10000;
+            border-radius: 5px;
+            font-size: 16px;
+            
+        }      
+    
+        /* Estilo para os radio buttons */
+        input[type="radio"] {
+            margin-right: 10px;
+            text-align: center;
+        }
+    
+        /* Estilos para o rodapé */
+        footer {
+            text-align: center;
+        }
+    
+        /* Estilos para imagens */
+        .imagem-container {
+            text-align: center; margin-bottom: 20px;
+        }
+    
+        .imagem-container img {
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    
+        /* Estilos para o contêiner de vídeo */
+        .video-container {
+            text-align: center;
+        }
+    
+        .video-container video {
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Outros estilos específicos, se necessário */
+    </style>
+    
+</head>
+<body>
+    <main>
+        <h1>Conheça o novo Empreendimento Residencial Condomínio Club na Vila das Belezas - SP</h1>
+        <!-- Inclusão das imagens -->
+        <div class="imagem-container">
+            <img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/tecimob-production/o/media/377caa23-04ed-420b-8fba-3026d73b17bb/properties/cf77adce-1dab-4ead-a3ce-d703da2fe4e3/images/da3fcd98-cadd-4728-b5f9-3de35c698be21698064081tkru.jpg" alt="Imagem 1">
+            <p>Viva o melhor da vida em nosso condomínio Club! Desfrute de momentos ao ar livre na academia ao ar livre, relaxe no bosque, e divirta-se com as opções de lazer como churrasqueira, piscina com prainha e sala de jogos. Seu novo lar é um convite ao bem-estar! 🌳🏋️‍♂️🎉</p>
+            <img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/tecimob-production/o/media/377caa23-04ed-420b-8fba-3026d73b17bb/properties/cf77adce-1dab-4ead-a3ce-d703da2fe4e3/images/03bbf2d1-66b9-4120-aa7f-2797b0749f7d1698064082Yr53.jpg" alt="Imagem 2">
+            <p>Sua família merece o melhor! No nosso condomínio Club, cada detalhe foi pensado para proporcionar conforto e diversão. Da brinquedoteca à quadra poliesportiva, aqui a alegria encontra seu espaço. Descubra um novo estilo de vida! 🏡🤸‍♂️🎈</p>
+            <img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/tecimob-production/o/media/377caa23-04ed-420b-8fba-3026d73b17bb/properties/cf77adce-1dab-4ead-a3ce-d703da2fe4e3/images/fe727248-33b0-43e7-b933-71aad29fb5ef1698064086hklX.jpg" alt="Imagem 6">
+            <p>Traga seu pet para viver momentos especiais no Pet Care e Pet Place. Além disso, conte com comodidades como coworking, delivery e lavanderia para facilitar o seu dia a dia. Seu novo lar é completo, assim como você merece! 🐾💼🚚</p>
+            <img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/tecimob-production/o/media/377caa23-04ed-420b-8fba-3026d73b17bb/properties/cf77adce-1dab-4ead-a3ce-d703da2fe4e3/images/fa139eb1-e35b-45fc-8ca9-ca61a4993e821698064224Z5G0.jpg" alt="Imagem 8">
+            <p>Localização privilegiada! Nosso condomínio Club está próximo a tudo que você precisa, desde supermercados e hospitais até shoppings e estações de metrô. Viva com comodidade e praticidade. Conheça seu futuro lar agora! 🏠🏬🚇</p>            
+            <img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/tecimob-production/o/media/377caa23-04ed-420b-8fba-3026d73b17bb/properties/cf77adce-1dab-4ead-a3ce-d703da2fe4e3/images/7cc09734-a931-4392-b5ee-77cfd8697c0b1698064160r3up.jpg" alt="Imagem 9">
+            
+            
+            
+        </div>
+        <h1>Devido o costume de ofertas da black friday resolvemos manter os preços de lançamento, aproveite!</h1>    
+        <div class="video-container">
+            <video width="640" controls autoplay preload="auto" loop>
+                <source src="video01.mp4" type="video/mp4">
+            </video>
+            <h1> Agora você pode solicitar direto no campo de mensagens uma simulação de financiamento, de entrada e de parcelas!</h1>
+            <video width="640" autoplay preload="auto" muted loop>
+                <source src="video02.mp4" type="video/mp4">
+            </video>
+            <h1> Solicite abaixo o ebook de apresentação completo e a tabela de preços dos apartamentos!</h1>
+        </div>
+        <form action="https://formspree.io/f/xvojywna" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="name" class="input-padrao" autocomplete="name" required placeholder="insira seu nome aqui">
+        
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" class="input-padrao" autocomplete="email" required placeholder="insira seu email aqui">
+        
+            <label for="contato">Contato WhatsApp:</label>
+            <input type="tel" id="contato" name="contato" class="input-padrao" autocomplete="cc-number" required placeholder="(xx) xxxxx-xxxx">
+        
+            <label for="mensagem">Se você procura alguma informação específica, aproveite o campo abaixo para enviar sua mensagem:</label>
+            <textarea cols="20" rows="5" id="mensagem" name="mensagem" class="input-padrao"></textarea>
+        
+            <fieldset>
+                <legend>Qual horário você prefere receber atendimento?</legend>
+                <select id="horario" name="horario"> <!-- Adicionado o atributo "id" para o campo de seleção -->
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Gostaria de deixar pré-agendado uma visita?</legend>
+                <select id="visita" name="visita">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+
+                <!-- Campos de seleção de data e horário (inicialmente ocultos) -->
+                <div id="data-horario-fields" style="display: none;">
+                    <label for="data">Selecione a data:</label>
+                    <input type="date" id="data" name="data">
+
+                    <label for="horario">Selecione o horário:</label>
+                    <input type="time" id="horario" name="horario">
+                </div>                        
+            </fieldset>
+            <input type="submit" value="Enviar" class="enviar" style="margin-top: 10px;">
+        </form>
+        
+        <footer>
+            <img src="logo.png" alt="Logo." width="100">
+            <br id="copiry" copyright">&copy; Copyright DEIVISON - 2023</br>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
